@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>Chroomsoft.Console.App</RootNamespace>
+    <AssemblyName>Chroomsoft.Console.App</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

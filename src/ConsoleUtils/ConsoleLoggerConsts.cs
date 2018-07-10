@@ -1,27 +1,31 @@
 ﻿using System;
 
-namespace ConsoleUtils
+namespace Chroomsoft.Console
 {
-    namespace Chroomsoft.ConsoleUtils
+    public static class ConsoleLoggerConsts
     {
-        public static class ConsoleLoggerConsts
+        static ConsoleLoggerConsts()
         {
-            static ConsoleLoggerConsts()
-            {
-                OkMessageText = "[OK]";
-                FailMessageText = "[FAIL]";
-                WarningMessageText = "[WARNING]";
-                OkMessageColour = ConsoleColor.Green;
-                FailMessageColour = ConsoleColor.Red;
-                WarningMessageColour = ConsoleColor.DarkYellow;
-            }
+            LoadDefaults();
+        }
 
-            public static string OkMessageText { get; set; }
-            public static string FailMessageText { get; set; }
-            public static string WarningMessageText { get; set; }
-            public static ConsoleColor OkMessageColour { get; set; }
-            public static ConsoleColor FailMessageColour { get; set; }
-            public static ConsoleColor WarningMessageColour { get; set; }
+        public static string OkMessageText { get; set; }
+        public static string FailMessageText { get; set; }
+        public static string WarningMessageText { get; set; }
+        public static string WaitingMessageText { get; set; }
+        public static ConsoleColor OkMessageColour { get; set; }
+        public static ConsoleColor FailMessageColour { get; set; }
+        public static ConsoleColor WarningMessageColour { get; set; }
+
+        public static void LoadDefaults()
+        {
+            OkMessageText = "[OK]";
+            FailMessageText = "[FAIL]";
+            WarningMessageText = "[WARNING]";
+            WaitingMessageText = "Please press a key to continue...";
+            OkMessageColour = ConsoleColor.Green;
+            FailMessageColour = ConsoleColor.Red;
+            WarningMessageColour = ConsoleColor.DarkYellow;
         }
     }
 }

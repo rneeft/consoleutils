@@ -1,4 +1,4 @@
-﻿using ConsoleUtils.Chroomsoft.ConsoleUtils;
+﻿using Chroomsoft.Console;
 
 namespace System
 {
@@ -67,6 +67,16 @@ namespace System
         {
             Fail();
             Print(ex.ToString(), ConsoleLoggerConsts.FailMessageColour, NewLine.Yes);
+        }
+
+        /// <summary>
+        /// Prints a 'press a key' message and waits for the user to press a key
+        /// </summary>
+        public static void Wait()
+        {
+            Console.Write(ConsoleLoggerConsts.WaitingMessageText);
+            Console.ReadKey();
+            Console.WriteLine(string.Empty);
         }
 
         /// <summary>

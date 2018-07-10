@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace ConsoleUtils.App
+namespace Chroomsoft.Console.App
 {
     internal class Program
     {
@@ -36,9 +36,20 @@ namespace ConsoleUtils.App
                 Thread.Sleep(50);
             }
 
-            ConsoleLogger.WriteProcess(50, 25);
+            ConsoleLogger.Wait();
 
-            Console.ReadKey();
+            ConsoleLogger.Print("You can also change the text and colour by using ");
+            ConsoleLogger.Print($"{nameof(ConsoleLoggerConsts)}", ConsoleColor.Cyan);
+            ConsoleLogger.Print(" class", NewLine.Yes);
+
+            ConsoleLoggerConsts.OkMessageText = "[READY?]";
+            ConsoleLoggerConsts.OkMessageColour = ConsoleColor.Blue;
+
+            ConsoleLogger.OK();
+
+            ConsoleLoggerConsts.WaitingMessageText = "Press a key to exit";
+
+            ConsoleLogger.Wait();
         }
     }
 }
