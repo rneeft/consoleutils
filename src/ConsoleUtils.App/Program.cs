@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Chroomsoft.Console.App
+namespace Chroomsoft.ConsoleUtilities.App
 {
     internal class Program
     {

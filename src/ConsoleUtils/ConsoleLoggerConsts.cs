@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Chroomsoft.Console
+namespace Chroomsoft.ConsoleUtilities
 {
     public static class ConsoleLoggerConsts
     {

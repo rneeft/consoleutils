@@ -1,4 +1,4 @@
-﻿using Chroomsoft.Console;
+﻿using Chroomsoft.ConsoleUtilities;
 
 namespace System
 {
